@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
   MapsComponent,
   LayersDirective,
@@ -19,13 +19,12 @@ function App() {
   var source;
   var destination;
   var mapsInstance;
-  var google;
   
   useEffect(() => {
       if (window.google && window.google.maps) {
         initMap();
       }
-  }, []);
+  });
 
   function initMap() {
     const directionsService = new window.google.maps.DirectionsService();
